@@ -9,7 +9,7 @@ using System.Web.Mvc;
 
 namespace GigHub.Controllers
 {
-    public class GigsController : Controller
+    public partial class GigsController : Controller
     {
         private ApplicationDbContext _context;
         public GigsController()
