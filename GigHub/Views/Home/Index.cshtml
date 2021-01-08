@@ -22,6 +22,7 @@
             <span class="genre">
                 @gig.Genre.Name
             </span>
+            <button data-artist-id="@gig.ArtistId" class="btn btn-link btn-sm pull-right js-toggle-following">Follow </button>
             <button data-gig-id="@gig.Id" class="btn btn-default btn-sm pull-right js-toggle-attendance">Going ? </button>
         </div>
     </li>
@@ -31,6 +32,7 @@
 @section scripts{
 <script>
     $(document).ready(function () {
+
         $(".js-toggle-attendance").click(function (e) {
             var button = $(e.target);
             $.post("/api/attendances", { gigId: button.attr("data-gig-id") })
@@ -43,7 +45,21 @@
                     alert("something failed!");
             });
         });
+
+         $(".js-toggle-following").click(function (e) {
+            var button = $(e.target);
+            $.post("/api/following", { FolloweeId: button.attr("data-artist-id") })
+                .done(function () {
+                    button
+                        .removeClass("btn-default")
+                        .addClass("btn-info").text("Following");
+                })
+                .fail(function () {
+                    alert("something failed!");
+            });
+        });
     });
+
 </script>
 }
                             
