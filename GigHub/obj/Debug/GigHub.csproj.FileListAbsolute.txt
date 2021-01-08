@@ -116,3 +116,4 @@ C:\Users\nicolas.delforno\source\repos\GigHub\GigHub\bin\System.Web.Http.WebHost
 C:\Users\nicolas.delforno\source\repos\GigHub\GigHub\bin\System.Net.Http.Formatting.xml
 C:\Users\nicolas.delforno\source\repos\GigHub\GigHub\bin\System.Web.Http.xml
 C:\Users\nicolas.delforno\source\repos\GigHub\GigHub\bin\System.Web.Http.WebHost.xml
+C:\Users\nicolas.delforno\source\repos\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddFollowing.resources
