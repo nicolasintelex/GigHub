@@ -105,7 +105,7 @@ h6,
 
 .form-control {
     font-size: 17px;
-    padding: 20px 15px;
+    height: 44px;
     border-radius: 9px;
 }
 
@@ -163,9 +163,20 @@ h6,
     padding: 2px 6px;
 }
 
-    .gigs > li .date .day {
-        background:#f7f7f7;
-        color: #333;
-        font-size:20px;
-        padding: 6px 12px;
-    }
+.gigs > li .date .day {
+    background:#f7f7f7;
+    color: #333;
+    font-size:20px;
+    padding: 6px 12px;
+}
+
+.gigs > li .actions {
+    font-size: 15px;
+    display: none;
+
+}
+
+.gigs > li:hover .actions {
+    font-size: 15px;
+    display: block;
+}
