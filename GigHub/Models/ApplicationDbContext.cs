@@ -10,7 +10,7 @@ namespace GigHub.Models
         public DbSet<Attendance> Attendances { get; set; }
         public DbSet<Following> Following { get; set; }
         public DbSet<Notification> Notification { get; set; }
-        public DbSet<UserNotification> UserNotification { get; set; }
+        public DbSet<UserNotification> UserNotifications { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
