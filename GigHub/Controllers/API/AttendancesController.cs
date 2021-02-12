@@ -8,34 +8,36 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace GigHub.Controllers
+namespace GigHub.Controllers.API
 {
     [Authorize]
-    public class FollowingController : ApiController
+    public class AttendancesController : ApiController
     {
         private ApplicationDbContext _context;
-        public FollowingController()
+
+        public AttendancesController()
         {
             _context = new ApplicationDbContext();
         }
 
         [HttpPost]
-        public IHttpActionResult Follow(FollowingDto dto)
+        public IHttpActionResult Attend(AttendanceDto dto)
         {
             var userId = User.Identity.GetUserId();
 
-            if (_context.Following.Any(f => f.FollowerId == userId && f.FolloweeId == dto.FolloweeId))
-                return BadRequest("the following already exists");
+            if (_context.Attendances.Any(a => a.AttendeeId == userId && a.GigId == dto.GigId))
+                return BadRequest("the attendance already exists");
 
-            var following = new Following
+            var attendance = new Attendance
             {
-                FollowerId = userId,
-                FolloweeId = dto.FolloweeId
+                GigId = dto.GigId,
+                AttendeeId = userId
             };
-            _context.Following.Add(following);
+            _context.Attendances.Add(attendance);
             _context.SaveChanges();
 
             return Ok();
         }
+
     }
 }

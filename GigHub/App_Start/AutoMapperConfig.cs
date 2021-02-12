@@ -3,8 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using GigHub.Controllers.API;
 using GigHub.Models;
+using GigHub.Dtos;
 
 namespace GigHub.App_Start
 {
