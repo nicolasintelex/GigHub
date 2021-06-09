@@ -202,6 +202,10 @@
     <Compile Include="Models\Notification.cs" />
     <Compile Include="Models\NotificationType.cs" />
     <Compile Include="Models\UserNotification.cs" />
+    <Compile Include="Repositories\AttendanceRepository.cs" />
+    <Compile Include="Repositories\FollowingRepository.cs" />
+    <Compile Include="Repositories\GenreRepository.cs" />
+    <Compile Include="Repositories\GigRepository.cs" />
     <Compile Include="ViewModels\GigsViewModel.cs" />
     <Compile Include="Dtos\AttendanceDto.cs" />
     <Compile Include="Controllers\API\AttendancesController.cs" />
@@ -270,6 +274,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\app\app.js" />
+    <Content Include="Scripts\app\Controllers\followingController.js" />
+    <Content Include="Scripts\app\Controllers\GigsController.js" />
+    <Content Include="Scripts\app\Services\attendanceService.js" />
+    <Content Include="Scripts\app\Services\followingService.js" />
     <Content Include="Scripts\bootbox.all.js" />
     <Content Include="Scripts\bootbox.all.min.js" />
     <Content Include="Scripts\bootbox.js" />
