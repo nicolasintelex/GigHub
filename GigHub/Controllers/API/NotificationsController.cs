@@ -1,5 +1,4 @@
-﻿using GigHub.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,7 +8,9 @@ using Microsoft.AspNet.Identity;
 using System.Data.Entity;
 using AutoMapper;
 using GigHub.App_Start;
-using GigHub.Dtos;
+using GigHub.Core.Dtos;
+using GigHub.Core.Models;
+using GigHub.Persistence;
 
 namespace GigHub.Controllers.API
 {
